@@ -34,7 +34,7 @@ public class LinksValidation {
 			{
 				HttpURLConnection httpsconn= (HttpURLConnection) link.openConnection();
 				httpsconn.connect();
-				if(httpsconn.getResponseCode()>400)
+				if(httpsconn.getResponseCode()>=400)
 				{
 					System.out.println(httpsconn.getResponseCode()+url+" is"+" Broken link");
 					brokenliks++;
